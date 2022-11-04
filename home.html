@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="imgs/agent.png">
+        <link rel="stylesheet" href="style.css">
+        <title>Agent</title>
+    </head>
+    <body>
+        <div class="scrollbar"></div>
+        <div class="navbar">
+            <img class="logo" src="imgs/agent.png" alt="agent" draggable="false">
+            <input type="text" class="host-field" placeholder="Host" title="host" spellcheck="false">
+            <select class="request-method" onclick="change_request_method()"></select>
+            <button style="--co:#ffff00;" class="request-host-btn" onclick="request_host()">Request</button>
+        </div>
+        <div class="all-headers"></div>
+    </body>
+    <button onclick="Add()" class="add-new" title="add new header container">Containers 0, Headers 0</button>
+    <div class="response">
+        <h1 class="title">Response</h1>
+        <!-- <div class="search-container">
+            <input type="text" class="query" placeholder="Search.." spellcheck="false">
+            <button class="do-search"><ion-icon name="search-outline"></ion-icon></button>
+        </div> -->
+        <textarea class="content" spellcheck="false"></textarea>
+        <div class="action">
+            <!-- <button class="save">save</button> -->
+            <button class="copy" onclick="Copy_response()">copy</button>
+            <button class="clear" onclick="Clear_response()">clear</button>
+            <div class="resizer">
+                <button onclick="Decrease()" class="decrease">-</button>
+                <input type="text" class="response-content-size" disabled value="500">
+                <button onclick="Increase()" class="increase">+</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="SM">
+            <a href="https://github.com/isecvirus/Agent" target="_blank">
+                <img class="github" title="Agent on github" src="imgs/github.png" alt="project-on-github" width="35" height="35">
+            </a>
+            <!-- <img class="instagram" title="" src="imgs/instagram.png" alt="instagram" width="35" height="35"> -->
+        </div> <!-- Social Media -->
+        <p class="copy-rights">All right reserved to <a href="https://github.com/isecvirus" target="_blank">SecVirus</a></p>
+    </footer>
+    <script src="home.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+</html>
